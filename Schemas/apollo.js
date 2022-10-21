@@ -11,6 +11,16 @@
 
  type Query {
     Users:[User!]
+    user(name:String!):User!
+ }
+
+input createUserInput {
+    name:String
+    age:Int
+}
+
+ type Mutation {
+    createUser(user:createUserInput!):[User!]
  }
  `
 
